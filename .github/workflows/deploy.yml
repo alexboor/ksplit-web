@@ -49,6 +49,6 @@ jobs:
             docker run -d \
               --name ksplit-web \
               --restart unless-stopped \
-              -p 80:80 \
+              -p 18081:80 \
               ${{ env.IMAGE }}:${{ github.sha }}
             docker image prune -f
