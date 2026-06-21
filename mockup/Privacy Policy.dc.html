@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: #09090C;
+      color: #EEEEF8;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</helmet>
+
+<!-- NAV -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;padding:0 6%;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);background:rgba(9,9,12,0.85);border-bottom:1px solid rgba(255,255,255,0.06);">
+  <div style="display:flex;align-items:center;gap:10px;flex:1;">
+    <img src="uploads/logo-1782036957470.png" alt="KeepSplit" style="width:32px;height:32px;border-radius:8px;">
+    <span style="font-size:18px;font-weight:700;letter-spacing:-0.5px;color:#EEEEF8;">KeepSplit</span>
+  </div>
+  <a href="Landing Page.dc.html" style="display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;color:rgba(238,238,248,0.65);border:1px solid rgba(255,255,255,0.1);transition:color 0.2s ease,border-color 0.2s ease;" style-hover="color:#EEEEF8;border-color:rgba(255,255,255,0.25);">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    Back to home
+  </a>
+</nav>
+
+<!-- PAGE HEADER -->
+<section style="padding:130px 6% 56px;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:60vw;height:60vw;max-width:700px;max-height:700px;border-radius:50%;background:radial-gradient(circle,rgba(124,85,240,0.12) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="position:relative;z-index:1;animation:fadeIn 0.8s cubic-bezier(0.22,1,0.36,1) both;">
+    <div style="display:inline-flex;align-items:center;gap:8px;padding:5px 14px 5px 10px;border-radius:100px;border:1px solid rgba(124,85,240,0.35);background:rgba(124,85,240,0.08);margin-bottom:28px;">
+      <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7EB8F7,#7C55F0);flex-shrink:0;display:block;"></span>
+      <span style="font-size:13px;font-weight:500;color:#A78BF5;">Legal</span>
+    </div>
+    <h1 style="font-size:clamp(36px,4vw,56px);font-weight:800;letter-spacing:-2px;line-height:1.08;margin-bottom:16px;color:#EEEEF8;">Privacy Policy</h1>
+    <p style="font-size:15px;color:rgba(238,238,248,0.4);font-weight:400;">Last updated: June 21, 2025</p>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div style="max-width:760px;margin:0 auto;padding:0 6%;"><div style="height:1px;background:rgba(255,255,255,0.07);"></div></div>
+
+<!-- CONTENT -->
+<main style="max-width:760px;margin:0 auto;padding:56px 6% 100px;">
+
+  <!-- Intro -->
+  <p style="font-size:16px;line-height:1.8;color:rgba(238,238,248,0.6);margin-bottom:56px;">
+    Welcome to <strong style="color:#EEEEF8;font-weight:600;">KeepSplit</strong> ("we", "our", or "us"). We are committed to protecting your personal information. This Privacy Policy explains what data we collect, how we use it, and your rights. By using KeepSplit, you agree to the practices described in this policy.
+  </p>
+
+  <!-- Section component -->
+  <!-- 1. Information We Collect -->
+  <div style="margin-bottom:52px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(124,85,240,0.15);border:1px solid rgba(124,85,240,0.25);font-size:13px;font-weight:700;color:#A78BF5;flex-shrink:0;">1</span>
+      <h2 style="font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#EEEEF8;">Information We Collect</h2>
+    </div>
+    <div style="padding-left:44px;">
+      <p style="font-size:15.5px;line-height:1.8;color:rgba(238,238,248,0.58);margin-bottom:16px;">We collect the following types of information when you use KeepSplit:</p>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="padding:18px 20px;border-radius:14px;background:#111118;border:1px solid rgba(255,255,255,0.06);">
+          <p style="font-size:14px;font-weight:600;color:#EEEEF8;margin-bottom:6px;">Account Information</p>
+          <p style="font-size:14.5px;line-height:1.7;color:rgba(238,238,248,0.52);">Your name and email address when you create an account or sign in.</p>
+        </div>
+        <div style="padding:18px 20px;border-radius:14px;background:#111118;border:1px solid rgba(255,255,255,0.06);">
+          <p style="font-size:14px;font-weight:600;color:#EEEEF8;margin-bottom:6px;">Group &amp; Expense Data</p>
+          <p style="font-size:14.5px;line-height:1.7;color:rgba(238,238,248,0.52);">Groups you create or join, expense descriptions, amounts, split configurations, and settlement records.</p>
+        </div>
+        <div style="padding:18px 20px;border-radius:14px;background:#111118;border:1px solid rgba(255,255,255,0.06);">
+          <p style="font-size:14px;font-weight:600;color:#EEEEF8;margin-bottom:6px;">Usage &amp; Device Data</p>
+          <p style="font-size:14.5px;line-height:1.7;color:rgba(238,238,248,0.52);">Basic analytics about how you use the app (screens visited, actions taken), your device type, OS version, and app version. We do not collect precise location data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:1px;background:rgba(255,255,255,0.05);margin-bottom:52px;"></div>
+
+  <!-- 2. How We Use Your Information -->
+  <div style="margin-bottom:52px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(126,184,247,0.12);border:1px solid rgba(126,184,247,0.22);font-size:13px;font-weight:700;color:#7EB8F7;flex-shrink:0;">2</span>
+      <h2 style="font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#EEEEF8;">How We Use Your Information</h2>
+    </div>
+    <div style="padding-left:44px;">
+      <p style="font-size:15.5px;line-height:1.8;color:rgba(238,238,248,0.58);margin-bottom:20px;">We use your information solely to provide and improve KeepSplit:</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+        <li style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.7;color:rgba(238,238,248,0.58);">
+          <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7EB8F7,#7C55F0);flex-shrink:0;margin-top:10px;display:block;"></span>
+          To operate the expense-tracking and settlement features of the app
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.7;color:rgba(238,238,248,0.58);">
+          <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7EB8F7,#7C55F0);flex-shrink:0;margin-top:10px;display:block;"></span>
+          To send you notifications about new expenses, balance updates, and settlements in your groups
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.7;color:rgba(238,238,248,0.58);">
+          <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7EB8F7,#7C55F0);flex-shrink:0;margin-top:10px;display:block;"></span>
+          To diagnose issues, improve performance, and develop new features
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.7;color:rgba(238,238,248,0.58);">
+          <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7EB8F7,#7C55F0);flex-shrink:0;margin-top:10px;display:block;"></span>
+          To respond to your support requests and communications
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="height:1px;background:rgba(255,255,255,0.05);margin-bottom:52px;"></div>
+
+  <!-- 3. Information Sharing -->
+  <div style="margin-bottom:52px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(124,85,240,0.15);border:1px solid rgba(124,85,240,0.25);font-size:13px;font-weight:700;color:#A78BF5;flex-shrink:0;">3</span>
+      <h2 style="font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#EEEEF8;">Information Sharing</h2>
+    </div>
+    <div style="padding-left:44px;">
+      <p style="font-size:15.5px;line-height:1.8;color:rgba(238,238,248,0.58);margin-bottom:20px;"><strong style="color:#EEEEF8;font-weight:600;">We do not sell your personal data.</strong> We share information only in these limited cases:</p>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="padding:18px 20px;border-radius:14px;background:#111118;border:1px solid rgba(255,255,255,0.06);">
+          <p style="font-size:14px;font-weight:600;color:#EEEEF8;margin-bottom:6px;">Within your groups</p>
+          <p style="font-size:14.5px;line-height:1.7;color:rgba(238,238,248,0.52);">Members of a group can see the group's expenses, balances, and settlement history. Your name is visible to other members in groups you join.</p>
+        </div>
+        <div style="padding:18px 20px;border-radius:14px;background:#111118;border:1px solid rgba(255,255,255,0.06);">
+          <p style="font-size:14px;font-weight:600;color:#EEEEF8;margin-bottom:6px;">Service Providers</p>
+          <p style="font-size:14.5px;line-height:1.7;color:rgba(238,238,248,0.52);">We use trusted third-party providers for hosting, crash reporting, and analytics. These providers process data only on our behalf and under strict confidentiality obligations.</p>
+        </div>
+        <div style="padding:18px 20px;border-radius:14px;background:#111118;border:1px solid rgba(255,255,255,0.06);">
+          <p style="font-size:14px;font-weight:600;color:#EEEEF8;margin-bottom:6px;">Legal Requirements</p>
+          <p style="font-size:14.5px;line-height:1.7;color:rgba(238,238,248,0.52);">We may disclose data if required by law, court order, or to protect the rights and safety of our users or the public.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:1px;background:rgba(255,255,255,0.05);margin-bottom:52px;"></div>
+
+  <!-- 4. Data Security -->
+  <div style="margin-bottom:52px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(208,96,207,0.12);border:1px solid rgba(208,96,207,0.22);font-size:13px;font-weight:700;color:#D060CF;flex-shrink:0;">4</span>
+      <h2 style="font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#EEEEF8;">Data Security</h2>
+    </div>
+    <div style="padding-left:44px;">
+      <p style="font-size:15.5px;line-height:1.8;color:rgba(238,238,248,0.58);">We implement industry-standard security measures to protect your data, including encryption in transit (TLS) and at rest. While we take reasonable precautions, no method of transmission over the internet is 100% secure. We encourage you to use a strong, unique password for your KeepSplit account.</p>
+    </div>
+  </div>
+
+  <div style="height:1px;background:rgba(255,255,255,0.05);margin-bottom:52px;"></div>
+
+  <!-- 5. Data Retention -->
+  <div style="margin-bottom:52px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(126,184,247,0.12);border:1px solid rgba(126,184,247,0.22);font-size:13px;font-weight:700;color:#7EB8F7;flex-shrink:0;">5</span>
+      <h2 style="font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#EEEEF8;">Data Retention</h2>
+    </div>
+    <div style="padding-left:44px;">
+      <p style="font-size:15.5px;line-height:1.8;color:rgba(238,238,248,0.58);">We retain your account and group data for as long as your account is active. If you delete your account, we will permanently remove your personal information within 30 days, except where retention is required by law. Anonymized, aggregate usage data may be retained for longer periods to help us improve the app.</p>
+    </div>
+  </div>
+
+  <div style="height:1px;background:rgba(255,255,255,0.05);margin-bottom:52px;"></div>
+
+  <!-- 6. Your Rights -->
+  <div style="margin-bottom:52px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(124,85,240,0.15);border:1px solid rgba(124,85,240,0.25);font-size:13px;font-weight:700;color:#A78BF5;flex-shrink:0;">6</span>
+      <h2 style="font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#EEEEF8;">Your Rights</h2>
+    </div>
+    <div style="padding-left:44px;">
+      <p style="font-size:15.5px;line-height:1.8;color:rgba(238,238,248,0.58);margin-bottom:20px;">Depending on your location, you may have the following rights regarding your personal data:</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+        <li style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.7;color:rgba(238,238,248,0.58);">
+          <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7C55F0,#D060CF);flex-shrink:0;margin-top:10px;display:block;"></span>
+          <span><strong style="color:#EEEEF8;font-weight:600;">Access:</strong> Request a copy of the personal data we hold about you</span>
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.7;color:rgba(238,238,248,0.58);">
+          <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7C55F0,#D060CF);flex-shrink:0;margin-top:10px;display:block;"></span>
+          <span><strong style="color:#EEEEF8;font-weight:600;">Correction:</strong> Ask us to correct inaccurate or incomplete data</span>
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.7;color:rgba(238,238,248,0.58);">
+          <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7C55F0,#D060CF);flex-shrink:0;margin-top:10px;display:block;"></span>
+          <span><strong style="color:#EEEEF8;font-weight:600;">Deletion:</strong> Delete your account and associated personal data from within the app settings</span>
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.7;color:rgba(238,238,248,0.58);">
+          <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7C55F0,#D060CF);flex-shrink:0;margin-top:10px;display:block;"></span>
+          <span><strong style="color:#EEEEF8;font-weight:600;">Portability:</strong> Request an export of your expense and group data in a machine-readable format</span>
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.7;color:rgba(238,238,248,0.58);">
+          <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7C55F0,#D060CF);flex-shrink:0;margin-top:10px;display:block;"></span>
+          <span><strong style="color:#EEEEF8;font-weight:600;">Opt-out:</strong> Disable push notifications at any time through your device settings</span>
+        </li>
+      </ul>
+      <p style="font-size:15px;line-height:1.8;color:rgba(238,238,248,0.5);margin-top:20px;">To exercise any of these rights, contact us at the email address below.</p>
+    </div>
+  </div>
+
+  <div style="height:1px;background:rgba(255,255,255,0.05);margin-bottom:52px;"></div>
+
+  <!-- 7. Children's Privacy -->
+  <div style="margin-bottom:52px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(208,96,207,0.12);border:1px solid rgba(208,96,207,0.22);font-size:13px;font-weight:700;color:#D060CF;flex-shrink:0;">7</span>
+      <h2 style="font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#EEEEF8;">Children's Privacy</h2>
+    </div>
+    <div style="padding-left:44px;">
+      <p style="font-size:15.5px;line-height:1.8;color:rgba(238,238,248,0.58);">KeepSplit is not intended for use by children under the age of 13. We do not knowingly collect personal information from children. If we become aware that a child under 13 has provided us with personal data, we will take steps to delete such information promptly.</p>
+    </div>
+  </div>
+
+  <div style="height:1px;background:rgba(255,255,255,0.05);margin-bottom:52px;"></div>
+
+  <!-- 8. Changes to This Policy -->
+  <div style="margin-bottom:52px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(126,184,247,0.12);border:1px solid rgba(126,184,247,0.22);font-size:13px;font-weight:700;color:#7EB8F7;flex-shrink:0;">8</span>
+      <h2 style="font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#EEEEF8;">Changes to This Policy</h2>
+    </div>
+    <div style="padding-left:44px;">
+      <p style="font-size:15.5px;line-height:1.8;color:rgba(238,238,248,0.58);">We may update this Privacy Policy from time to time. When we make material changes, we will notify you through the app or by email, and update the "Last updated" date at the top of this page. Continued use of KeepSplit after changes take effect constitutes acceptance of the revised policy.</p>
+    </div>
+  </div>
+
+  <div style="height:1px;background:rgba(255,255,255,0.05);margin-bottom:52px;"></div>
+
+  <!-- 9. Contact Us -->
+  <div style="margin-bottom:0;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(124,85,240,0.15);border:1px solid rgba(124,85,240,0.25);font-size:13px;font-weight:700;color:#A78BF5;flex-shrink:0;">9</span>
+      <h2 style="font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#EEEEF8;">Contact Us</h2>
+    </div>
+    <div style="padding-left:44px;">
+      <p style="font-size:15.5px;line-height:1.8;color:rgba(238,238,248,0.58);margin-bottom:24px;">If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+      <div style="display:inline-flex;align-items:center;gap:12px;padding:18px 24px;border-radius:16px;background:rgba(124,85,240,0.08);border:1px solid rgba(124,85,240,0.22);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A78BF5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        <a href="mailto:privacy@KeepSplit.app" style="font-size:15px;font-weight:600;color:#A78BF5;text-decoration:none;" style-hover="color:#EEEEF8;">privacy@KeepSplit.app</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="padding:28px 6%;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <img src="uploads/logo-1782036957470.png" alt="KeepSplit" style="width:24px;height:24px;border-radius:6px;">
+    <span style="font-size:14px;font-weight:600;color:rgba(238,238,248,0.5);">KeepSplit</span>
+  </div>
+  <p style="font-size:13px;color:rgba(238,238,248,0.3);">© 2025 KeepSplit. All rights reserved.</p>
+  <a href="Landing Page.dc.html" style="font-size:13px;color:rgba(238,238,248,0.4);text-decoration:none;transition:color 0.2s ease;" style-hover="color:#EEEEF8;">← Back to home</a>
+</footer>
+</x-dc>
+</body>
+</html>
