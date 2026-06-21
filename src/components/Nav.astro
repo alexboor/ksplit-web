@@ -1,0 +1,32 @@
+---
+interface Props {
+  showBack?: boolean;
+}
+const { showBack = false } = Astro.props;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-[200] h-[68px] flex items-center px-[6%] backdrop-blur-[24px] bg-[rgba(9,9,12,0.8)] border-b border-white/[0.06] animate-fade-in">
+  <div class="flex items-center gap-[10px] flex-1">
+    <img src="/uploads/logo-1782036957470.png" alt="KeepSplit" class="w-8 h-8 rounded-lg" />
+    <span class="text-[18px] font-bold tracking-[-0.5px] text-[#EEEEF8]">KeepSplit</span>
+  </div>
+
+  {showBack ? (
+    <a
+      href="/"
+      class="inline-flex items-center gap-2 px-5 py-[9px] rounded-full text-[14px] font-medium no-underline text-[rgba(238,238,248,0.65)] border border-white/10 transition-colors duration-200 hover:text-[#EEEEF8] hover:border-white/25"
+    >
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+      Back to home
+    </a>
+  ) : (
+    <a
+      href="#download"
+      class="inline-flex items-center px-6 py-[10px] rounded-full text-[14px] font-semibold tracking-[0.1px] no-underline text-white gradient-brand hover:opacity-90 transition-opacity duration-200"
+    >
+      Download
+    </a>
+  )}
+</nav>

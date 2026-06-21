@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-[#09090C] text-[#EEEEF8] font-outfit antialiased overflow-x-hidden;
+  }
+}
+
+/* Scroll-triggered animation base state */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-animate].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-animate-delay-1].in-view { transition-delay: 0.12s; }
+[data-animate-delay-2].in-view { transition-delay: 0.24s; }
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(130deg, #BDD8FF 0%, #A78BF5 50%, #E07DDE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Brand gradient background */
+.gradient-brand {
+  background: linear-gradient(135deg, #7EB8F7 0%, #7C55F0 50%, #D060CF 100%);
+}

@@ -1,0 +1,39 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  lastUpdated: string;
+}
+const { title, lastUpdated } = Astro.props;
+---
+
+<Base title={`${title} — KeepSplit`} showBack={true}>
+  <!-- Page Header -->
+  <section class="pt-[130px] pb-14 px-[6%] text-center relative overflow-hidden">
+    <!-- Glow -->
+    <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full pointer-events-none"
+      style="background:radial-gradient(circle,rgba(124,85,240,0.12) 0%,transparent 65%)"></div>
+
+    <div class="relative z-10 animate-fade-in">
+      <!-- Legal pill -->
+      <div class="inline-flex items-center gap-2 px-[14px] py-[5px] pl-[10px] rounded-full border border-[rgba(124,85,240,0.35)] bg-[rgba(124,85,240,0.08)] mb-7">
+        <span class="w-[6px] h-[6px] rounded-full flex-shrink-0 block" style="background:linear-gradient(135deg,#7EB8F7,#7C55F0)"></span>
+        <span class="text-[13px] font-medium text-[#A78BF5]">Legal</span>
+      </div>
+
+      <h1 class="text-[clamp(36px,4vw,56px)] font-extrabold tracking-[-2px] leading-[1.08] mb-4 text-[#EEEEF8]">{title}</h1>
+      <p class="text-[15px] text-[rgba(238,238,248,0.4)]">Last updated: {lastUpdated}</p>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-[760px] mx-auto px-[6%]">
+    <div class="h-px bg-white/[0.07]"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="max-w-[760px] mx-auto px-[6%] pt-14 pb-24">
+    <slot />
+  </div>
+</Base>

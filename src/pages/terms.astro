@@ -1,0 +1,215 @@
+---
+import Legal from '../layouts/Legal.astro';
+
+const sectionColors = [
+  { color: '#A78BF5', bg: 'rgba(124,85,240,0.15)', border: 'rgba(124,85,240,0.25)' },
+  { color: '#7EB8F7', bg: 'rgba(126,184,247,0.12)', border: 'rgba(126,184,247,0.22)' },
+  { color: '#A78BF5', bg: 'rgba(124,85,240,0.15)', border: 'rgba(124,85,240,0.25)' },
+  { color: '#D060CF', bg: 'rgba(208,96,207,0.12)', border: 'rgba(208,96,207,0.22)' },
+  { color: '#7EB8F7', bg: 'rgba(126,184,247,0.12)', border: 'rgba(126,184,247,0.22)' },
+  { color: '#A78BF5', bg: 'rgba(124,85,240,0.15)', border: 'rgba(124,85,240,0.25)' },
+  { color: '#D060CF', bg: 'rgba(208,96,207,0.12)', border: 'rgba(208,96,207,0.22)' },
+  { color: '#7EB8F7', bg: 'rgba(126,184,247,0.12)', border: 'rgba(126,184,247,0.22)' },
+  { color: '#A78BF5', bg: 'rgba(124,85,240,0.15)', border: 'rgba(124,85,240,0.25)' },
+];
+---
+
+<Legal title="Terms of Service" lastUpdated="June 21, 2025">
+  <!-- Intro -->
+  <p class="text-[16px] leading-[1.8] text-[rgba(238,238,248,0.6)] mb-14">
+    Please read these Terms of Service ("Terms") carefully before using <strong class="text-[#EEEEF8] font-semibold">KeepSplit</strong> ("we", "our", or "us"). By downloading, installing, or using the KeepSplit app or website, you agree to be bound by these Terms. If you do not agree, do not use KeepSplit.
+  </p>
+
+  <!-- 1. Acceptance of Terms -->
+  <section class="mb-[52px]">
+    <div class="flex items-center gap-[14px] mb-5">
+      <span class="inline-flex items-center justify-center w-[30px] h-[30px] rounded-[8px] text-[13px] font-bold flex-shrink-0"
+        style={`background:${sectionColors[0].bg};border:1px solid ${sectionColors[0].border};color:${sectionColors[0].color}`}>1</span>
+      <h2 class="text-[22px] font-bold tracking-[-0.5px] text-[#EEEEF8]">Acceptance of Terms</h2>
+    </div>
+    <div class="pl-11">
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)]">By creating an account or using any part of the KeepSplit service, you confirm that you are at least 13 years old, that you have read and agree to these Terms, and that you have read our <a href="/privacy" class="text-[#A78BF5] hover:text-[#EEEEF8] transition-colors duration-200 no-underline">Privacy Policy</a>. If you are using KeepSplit on behalf of an organization, you represent that you have authority to bind that organization to these Terms.</p>
+    </div>
+  </section>
+
+  <div class="h-px bg-white/[0.05] mb-[52px]"></div>
+
+  <!-- 2. Description of Service -->
+  <section class="mb-[52px]">
+    <div class="flex items-center gap-[14px] mb-5">
+      <span class="inline-flex items-center justify-center w-[30px] h-[30px] rounded-[8px] text-[13px] font-bold flex-shrink-0"
+        style={`background:${sectionColors[1].bg};border:1px solid ${sectionColors[1].border};color:${sectionColors[1].color}`}>2</span>
+      <h2 class="text-[22px] font-bold tracking-[-0.5px] text-[#EEEEF8]">Description of Service</h2>
+    </div>
+    <div class="pl-11">
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)] mb-4">KeepSplit is an expense-tracking and bill-splitting application for groups. It allows users to:</p>
+      <ul class="flex flex-col gap-3 list-none">
+        {[
+          'Create and manage groups for shared expenses',
+          'Log, categorize, and split expenses among group members',
+          'Track balances and record settlements',
+          'Receive notifications about group activity',
+        ].map((item) => (
+          <li class="flex items-start gap-3 text-[15px] leading-[1.7] text-[rgba(238,238,248,0.58)]">
+            <span class="w-[6px] h-[6px] rounded-full flex-shrink-0 mt-[10px] block" style="background:linear-gradient(135deg,#7EB8F7,#7C55F0)"></span>
+            {item}
+          </li>
+        ))}
+      </ul>
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)] mt-4">KeepSplit is a tool to help coordinate shared finances. We do not process or transfer actual payments between users.</p>
+    </div>
+  </section>
+
+  <div class="h-px bg-white/[0.05] mb-[52px]"></div>
+
+  <!-- 3. User Accounts -->
+  <section class="mb-[52px]">
+    <div class="flex items-center gap-[14px] mb-5">
+      <span class="inline-flex items-center justify-center w-[30px] h-[30px] rounded-[8px] text-[13px] font-bold flex-shrink-0"
+        style={`background:${sectionColors[2].bg};border:1px solid ${sectionColors[2].border};color:${sectionColors[2].color}`}>3</span>
+      <h2 class="text-[22px] font-bold tracking-[-0.5px] text-[#EEEEF8]">User Accounts</h2>
+    </div>
+    <div class="pl-11">
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)] mb-4">When you create an account, you agree to:</p>
+      <div class="flex flex-col gap-[14px]">
+        <div class="px-5 py-[18px] rounded-[14px] bg-surface border border-white/[0.06]">
+          <p class="text-[14px] font-semibold text-[#EEEEF8] mb-[6px]">Accurate Information</p>
+          <p class="text-[14.5px] leading-[1.7] text-[rgba(238,238,248,0.52)]">Provide truthful, current, and complete information. Keep your account information up to date.</p>
+        </div>
+        <div class="px-5 py-[18px] rounded-[14px] bg-surface border border-white/[0.06]">
+          <p class="text-[14px] font-semibold text-[#EEEEF8] mb-[6px]">Account Security</p>
+          <p class="text-[14.5px] leading-[1.7] text-[rgba(238,238,248,0.52)]">Keep your login credentials confidential. You are responsible for all activity that occurs under your account. Notify us immediately at <a href="mailto:privacy@KeepSplit.app" class="text-[#A78BF5] hover:text-[#EEEEF8] transition-colors duration-200 no-underline">privacy@KeepSplit.app</a> if you suspect unauthorized access.</p>
+        </div>
+        <div class="px-5 py-[18px] rounded-[14px] bg-surface border border-white/[0.06]">
+          <p class="text-[14px] font-semibold text-[#EEEEF8] mb-[6px]">One Account Per Person</p>
+          <p class="text-[14.5px] leading-[1.7] text-[rgba(238,238,248,0.52)]">You may not create accounts for others without their express permission. Accounts are non-transferable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="h-px bg-white/[0.05] mb-[52px]"></div>
+
+  <!-- 4. Prohibited Conduct -->
+  <section class="mb-[52px]">
+    <div class="flex items-center gap-[14px] mb-5">
+      <span class="inline-flex items-center justify-center w-[30px] h-[30px] rounded-[8px] text-[13px] font-bold flex-shrink-0"
+        style={`background:${sectionColors[3].bg};border:1px solid ${sectionColors[3].border};color:${sectionColors[3].color}`}>4</span>
+      <h2 class="text-[22px] font-bold tracking-[-0.5px] text-[#EEEEF8]">Prohibited Conduct</h2>
+    </div>
+    <div class="pl-11">
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)] mb-4">You agree not to use KeepSplit to:</p>
+      <ul class="flex flex-col gap-3 list-none">
+        {[
+          'Violate any applicable law or regulation',
+          'Harass, abuse, or harm other users',
+          'Upload or transmit malware, viruses, or malicious code',
+          'Attempt to gain unauthorized access to our systems or other users\' accounts',
+          'Scrape, crawl, or systematically copy content from the service',
+          'Use the service for any fraudulent or deceptive purpose',
+          'Impersonate any person or entity',
+        ].map((item) => (
+          <li class="flex items-start gap-3 text-[15px] leading-[1.7] text-[rgba(238,238,248,0.58)]">
+            <span class="w-[6px] h-[6px] rounded-full flex-shrink-0 mt-[10px] block" style="background:linear-gradient(135deg,#D060CF,#7C55F0)"></span>
+            {item}
+          </li>
+        ))}
+      </ul>
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)] mt-4">We reserve the right to suspend or terminate accounts that violate these prohibitions.</p>
+    </div>
+  </section>
+
+  <div class="h-px bg-white/[0.05] mb-[52px]"></div>
+
+  <!-- 5. Intellectual Property -->
+  <section class="mb-[52px]">
+    <div class="flex items-center gap-[14px] mb-5">
+      <span class="inline-flex items-center justify-center w-[30px] h-[30px] rounded-[8px] text-[13px] font-bold flex-shrink-0"
+        style={`background:${sectionColors[4].bg};border:1px solid ${sectionColors[4].border};color:${sectionColors[4].color}`}>5</span>
+      <h2 class="text-[22px] font-bold tracking-[-0.5px] text-[#EEEEF8]">Intellectual Property</h2>
+    </div>
+    <div class="pl-11">
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)] mb-4">KeepSplit and all of its content, features, and functionality — including the software, design, logos, and trademarks — are owned by us and protected by applicable intellectual property laws.</p>
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)]">We grant you a limited, non-exclusive, non-transferable, revocable license to use KeepSplit for personal, non-commercial purposes in accordance with these Terms. You may not copy, modify, distribute, sell, or lease any part of our service or software.</p>
+    </div>
+  </section>
+
+  <div class="h-px bg-white/[0.05] mb-[52px]"></div>
+
+  <!-- 6. Disclaimers & Limitation of Liability -->
+  <section class="mb-[52px]">
+    <div class="flex items-center gap-[14px] mb-5">
+      <span class="inline-flex items-center justify-center w-[30px] h-[30px] rounded-[8px] text-[13px] font-bold flex-shrink-0"
+        style={`background:${sectionColors[5].bg};border:1px solid ${sectionColors[5].border};color:${sectionColors[5].color}`}>6</span>
+      <h2 class="text-[22px] font-bold tracking-[-0.5px] text-[#EEEEF8]">Disclaimers &amp; Limitation of Liability</h2>
+    </div>
+    <div class="pl-11">
+      <div class="flex flex-col gap-[14px]">
+        <div class="px-5 py-[18px] rounded-[14px] bg-surface border border-white/[0.06]">
+          <p class="text-[14px] font-semibold text-[#EEEEF8] mb-[6px]">No Financial Advice</p>
+          <p class="text-[14.5px] leading-[1.7] text-[rgba(238,238,248,0.52)]">KeepSplit is an organizational tool only. We do not provide financial, legal, or accounting advice. Expense calculations are based solely on the data you and your group members enter.</p>
+        </div>
+        <div class="px-5 py-[18px] rounded-[14px] bg-surface border border-white/[0.06]">
+          <p class="text-[14px] font-semibold text-[#EEEEF8] mb-[6px]">Service Availability</p>
+          <p class="text-[14.5px] leading-[1.7] text-[rgba(238,238,248,0.52)]">We strive for high availability but do not guarantee uninterrupted or error-free service. We are not liable for any losses caused by service outages or data errors.</p>
+        </div>
+        <div class="px-5 py-[18px] rounded-[14px] bg-surface border border-white/[0.06]">
+          <p class="text-[14px] font-semibold text-[#EEEEF8] mb-[6px]">Limitation of Liability</p>
+          <p class="text-[14.5px] leading-[1.7] text-[rgba(238,238,248,0.52)]">To the maximum extent permitted by law, KeepSplit and its officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the service.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="h-px bg-white/[0.05] mb-[52px]"></div>
+
+  <!-- 7. Governing Law -->
+  <section class="mb-[52px]">
+    <div class="flex items-center gap-[14px] mb-5">
+      <span class="inline-flex items-center justify-center w-[30px] h-[30px] rounded-[8px] text-[13px] font-bold flex-shrink-0"
+        style={`background:${sectionColors[6].bg};border:1px solid ${sectionColors[6].border};color:${sectionColors[6].color}`}>7</span>
+      <h2 class="text-[22px] font-bold tracking-[-0.5px] text-[#EEEEF8]">Governing Law</h2>
+    </div>
+    <div class="pl-11">
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)]">These Terms are governed by and construed in accordance with applicable law. Any disputes arising from these Terms or your use of KeepSplit shall be resolved through binding arbitration or in the courts of the jurisdiction where KeepSplit is registered, unless prohibited by local law. You waive any right to a jury trial or class-action lawsuit to the extent permitted by law.</p>
+    </div>
+  </section>
+
+  <div class="h-px bg-white/[0.05] mb-[52px]"></div>
+
+  <!-- 8. Changes to Terms -->
+  <section class="mb-[52px]">
+    <div class="flex items-center gap-[14px] mb-5">
+      <span class="inline-flex items-center justify-center w-[30px] h-[30px] rounded-[8px] text-[13px] font-bold flex-shrink-0"
+        style={`background:${sectionColors[7].bg};border:1px solid ${sectionColors[7].border};color:${sectionColors[7].color}`}>8</span>
+      <h2 class="text-[22px] font-bold tracking-[-0.5px] text-[#EEEEF8]">Changes to Terms</h2>
+    </div>
+    <div class="pl-11">
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)]">We may update these Terms from time to time. When we make material changes, we will notify you through the app or by email, and update the "Last updated" date at the top of this page. Your continued use of KeepSplit after changes take effect constitutes your acceptance of the revised Terms. If you do not agree to the updated Terms, you must stop using the service and delete your account.</p>
+    </div>
+  </section>
+
+  <div class="h-px bg-white/[0.05] mb-[52px]"></div>
+
+  <!-- 9. Contact -->
+  <section>
+    <div class="flex items-center gap-[14px] mb-5">
+      <span class="inline-flex items-center justify-center w-[30px] h-[30px] rounded-[8px] text-[13px] font-bold flex-shrink-0"
+        style={`background:${sectionColors[8].bg};border:1px solid ${sectionColors[8].border};color:${sectionColors[8].color}`}>9</span>
+      <h2 class="text-[22px] font-bold tracking-[-0.5px] text-[#EEEEF8]">Contact</h2>
+    </div>
+    <div class="pl-11">
+      <p class="text-[15.5px] leading-[1.8] text-[rgba(238,238,248,0.58)] mb-6">If you have any questions about these Terms, please reach out:</p>
+      <div class="inline-flex items-center gap-3 px-6 py-[18px] rounded-[16px]"
+        style="background:rgba(124,85,240,0.08);border:1px solid rgba(124,85,240,0.22)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A78BF5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <a href="mailto:privacy@KeepSplit.app" class="text-[15px] font-semibold text-[#A78BF5] no-underline hover:text-[#EEEEF8] transition-colors duration-200">
+          privacy@KeepSplit.app
+        </a>
+      </div>
+    </div>
+  </section>
+</Legal>

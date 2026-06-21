@@ -1,0 +1,219 @@
+---
+import Base from '../layouts/Base.astro';
+import StoreButtons from '../components/StoreButtons.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+
+const features = [
+  {
+    title: 'Create a Group',
+    description: 'Start a group for any trip or occasion in seconds. Name it, set it up, and you\'re ready to go.',
+    accentColor: '#7C55F0',
+    accentBg: 'rgba(124,85,240,0.12)',
+    accentBorder: 'rgba(124,85,240,0.22)',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C55F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>`,
+  },
+  {
+    title: 'Invite Members',
+    description: 'Add friends with a simple link. Everyone joins instantly and stays in the loop from day one.',
+    accentColor: '#7EB8F7',
+    accentBg: 'rgba(126,184,247,0.1)',
+    accentBorder: 'rgba(126,184,247,0.2)',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7EB8F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" y1="8" x2="19" y2="14"></line><line x1="22" y1="11" x2="16" y2="11"></line></svg>`,
+  },
+  {
+    title: 'Add Expenses',
+    description: 'Log who paid, how much, and split equally or with custom amounts per person. Equal or custom — your call.',
+    accentColor: '#A78BF5',
+    accentBg: 'rgba(124,85,240,0.22)',
+    accentBorder: 'rgba(124,85,240,0.35)',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A78BF5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"></rect><line x1="12" y1="9" x2="12" y2="15"></line><line x1="9" y1="12" x2="15" y2="12"></line></svg>`,
+    highlighted: true,
+  },
+  {
+    title: 'View Balances',
+    description: 'A real-time view of who owes whom and how much. Always crystal clear, no spreadsheets needed.',
+    accentColor: '#D060CF',
+    accentBg: 'rgba(208,96,207,0.1)',
+    accentBorder: 'rgba(208,96,207,0.2)',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D060CF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>`,
+  },
+  {
+    title: 'Record Settlements',
+    description: 'When a debt is paid, mark it as settled and keep a clean history of every transaction. Peace of mind for everyone in the group.',
+    accentColor: '#7EB8F7',
+    accentBg: 'rgba(126,184,247,0.1)',
+    accentBorder: 'rgba(126,184,247,0.2)',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7EB8F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`,
+    wide: true,
+  },
+];
+---
+
+<Base>
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center justify-center px-[6%] pt-32 pb-20 relative overflow-hidden">
+    <!-- Background glows -->
+    <div class="absolute top-[-15%] left-[-10%] w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] rounded-full pointer-events-none animate-glow-breath"
+      style="background:radial-gradient(circle at 40% 40%, rgba(124,85,240,0.18) 0%, rgba(124,85,240,0.03) 55%, transparent 70%)"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full pointer-events-none animate-glow-breath-slow"
+      style="background:radial-gradient(circle at 60% 60%, rgba(208,96,207,0.14) 0%, transparent 65%)"></div>
+
+    <div class="max-w-[1160px] w-full grid md:grid-cols-2 gap-[72px] items-center relative z-10">
+      <!-- Left: text -->
+      <div class="animate-fade-in-up" style="animation-delay:0.1s">
+        <!-- Pill badge -->
+        <div class="inline-flex items-center gap-2 px-[14px] py-[5px] pl-[10px] rounded-full border border-[rgba(124,85,240,0.4)] bg-[rgba(124,85,240,0.1)] mb-[30px]">
+          <span class="w-[7px] h-[7px] rounded-full flex-shrink-0 block" style="background:linear-gradient(135deg,#7EB8F7,#7C55F0)"></span>
+          <span class="text-[13px] font-medium text-[#A78BF5] tracking-[0.2px]">Available for iOS &amp; Android</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-black leading-[1.04] tracking-[-3px] mb-[22px]" style="font-size:clamp(42px,4.8vw,70px)">
+          <span class="block gradient-text">Split the bill.</span>
+          <span class="block text-[#EEEEF8]">Keep the vibe.</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="text-[18px] leading-[1.7] text-[rgba(238,238,248,0.52)] max-w-[440px] mb-11 font-normal">
+          KeepSplit tracks shared travel expenses for your group — so everyone always knows who owes what, without the awkward math.
+        </p>
+
+        <StoreButtons />
+      </div>
+
+      <!-- Right: phone mockup -->
+      <div class="flex justify-center items-center animate-fade-in-up" style="animation-delay:0.25s">
+        <div class="animate-float-phone relative">
+          <!-- Phone body -->
+          <div class="w-[294px] h-[608px] rounded-[50px] overflow-hidden relative"
+            style="background:#18181F;border:1.5px solid rgba(255,255,255,0.11);box-shadow:0 60px 120px rgba(0,0,0,0.75),0 0 0 1px rgba(255,255,255,0.04),inset 0 1px 0 rgba(255,255,255,0.08)">
+            <!-- Status bar with notch -->
+            <div class="h-[46px] bg-[#F4F4F6] flex items-end justify-center pb-[6px] flex-shrink-0">
+              <div class="w-[112px] h-[26px] bg-[#18181F] rounded-b-[18px]"></div>
+            </div>
+            <!-- Screenshot -->
+            <div class="h-[562px] overflow-hidden bg-[#F4F4F6]">
+              <img
+                src="/uploads/screenshots-1782037382361.jpg"
+                alt="KeepSplit app"
+                class="w-full h-full object-cover object-top"
+                loading="eager"
+              />
+            </div>
+          </div>
+          <!-- Glow shadow -->
+          <div class="absolute bottom-[-44px] left-1/2 -translate-x-1/2 w-[200px] h-[56px] pointer-events-none"
+            style="background:radial-gradient(ellipse,rgba(124,85,240,0.55) 0%,transparent 70%);filter:blur(18px)"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-[110px] px-[6%] relative">
+    <div class="max-w-[1160px] mx-auto">
+      <!-- Section header -->
+      <div data-animate class="text-center max-w-[560px] mx-auto mb-[72px]">
+        <p class="text-[12px] font-bold tracking-[2px] uppercase text-brand-purple mb-[14px]">Features</p>
+        <h2 class="font-extrabold leading-[1.1] tracking-[-1.5px] text-[#EEEEF8]" style="font-size:clamp(30px,3.2vw,46px)">
+          Everything you need<br />to split fairly
+        </h2>
+      </div>
+
+      <!-- Feature grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
+        {features.map((f) => (
+          <FeatureCard
+            title={f.title}
+            description={f.description}
+            accentColor={f.accentColor}
+            accentBg={f.accentBg}
+            accentBorder={f.accentBorder}
+            icon={f.icon}
+            highlighted={f.highlighted}
+            wide={f.wide}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="py-[110px] px-[6%] bg-surface-alt relative overflow-hidden">
+    <!-- Dot grid -->
+    <div class="absolute inset-0 pointer-events-none opacity-60"
+      style="background-image:radial-gradient(rgba(124,85,240,0.12) 1px,transparent 1px);background-size:36px 36px"></div>
+
+    <div class="max-w-[1160px] mx-auto relative z-10">
+      <!-- Header -->
+      <div data-animate class="text-center max-w-[560px] mx-auto mb-20">
+        <p class="text-[12px] font-bold tracking-[2px] uppercase text-brand-purple mb-[14px]">How it works</p>
+        <h2 class="font-extrabold leading-[1.1] tracking-[-1.5px] text-[#EEEEF8]" style="font-size:clamp(30px,3.2vw,46px)">
+          Up and running<br />in three steps
+        </h2>
+      </div>
+
+      <!-- Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+        <!-- Connector line (desktop only) -->
+        <div class="hidden md:block absolute top-[35px] h-px pointer-events-none"
+          style="left:calc(16.67% + 36px);right:calc(16.67% + 36px);background:linear-gradient(90deg,rgba(126,184,247,0.4),rgba(124,85,240,0.6),rgba(208,96,207,0.4))"></div>
+
+        <!-- Step 1 -->
+        <div data-animate class="text-center px-4">
+          <div class="w-[70px] h-[70px] rounded-full flex items-center justify-center mx-auto mb-7 relative"
+            style="background:rgba(126,184,247,0.08);border:1px solid rgba(126,184,247,0.3)">
+            <span class="text-[20px] font-black tracking-[-1px] gradient-text">01</span>
+          </div>
+          <h3 class="text-[18px] font-bold tracking-[-0.4px] text-[#EEEEF8] mb-3">Create your group</h3>
+          <p class="text-[14.5px] leading-[1.7] text-[rgba(238,238,248,0.48)]">Start a group for your trip or event and give it a name. Takes under ten seconds.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div data-animate data-animate-delay-1 class="text-center px-4">
+          <div class="w-[70px] h-[70px] rounded-full flex items-center justify-center mx-auto mb-7"
+            style="background:rgba(124,85,240,0.1);border:1px solid rgba(124,85,240,0.35)">
+            <span class="text-[20px] font-black tracking-[-1px]" style="background:linear-gradient(135deg,#7C55F0,#D060CF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">02</span>
+          </div>
+          <h3 class="text-[18px] font-bold tracking-[-0.4px] text-[#EEEEF8] mb-3">Log expenses as you go</h3>
+          <p class="text-[14.5px] leading-[1.7] text-[rgba(238,238,248,0.48)]">Add each expense right when it happens — who paid, how much, and how to split it.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div data-animate data-animate-delay-2 class="text-center px-4">
+          <div class="w-[70px] h-[70px] rounded-full flex items-center justify-center mx-auto mb-7"
+            style="background:rgba(208,96,207,0.08);border:1px solid rgba(208,96,207,0.3)">
+            <span class="text-[20px] font-black tracking-[-1px]" style="background:linear-gradient(135deg,#D060CF,#7EB8F7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">03</span>
+          </div>
+          <h3 class="text-[18px] font-bold tracking-[-0.4px] text-[#EEEEF8] mb-3">Settle up when ready</h3>
+          <p class="text-[14.5px] leading-[1.7] text-[rgba(238,238,248,0.48)]">Record payments, clear the slate, and move on. No lingering awkwardness required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CTA -->
+  <section id="download" class="py-[130px] px-[6%] text-center relative overflow-hidden">
+    <!-- Central glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] max-w-[800px] max-h-[800px] rounded-full pointer-events-none animate-glow-breath"
+      style="background:radial-gradient(circle,rgba(124,85,240,0.16) 0%,rgba(208,96,207,0.06) 40%,transparent 70%)"></div>
+
+    <div data-animate class="max-w-[600px] mx-auto relative z-10">
+      <img src="/uploads/logo-1782036957470.png" alt="KeepSplit" class="w-[88px] h-[88px] rounded-[24px] mb-8 mx-auto"
+        style="box-shadow:0 24px 60px rgba(124,85,240,0.45)" />
+
+      <h2 class="font-black leading-[1.06] tracking-[-2.5px] mb-[18px]" style="font-size:clamp(36px,4.2vw,58px)">
+        <span class="block gradient-text">Start splitting</span>
+        <span class="block text-[#EEEEF8]">for free today.</span>
+      </h2>
+
+      <p class="text-[17px] leading-[1.7] text-[rgba(238,238,248,0.48)] mb-11">
+        Join travelers who keep their shared finances clear and fair — with KeepSplit.
+      </p>
+
+      <div class="flex justify-center">
+        <StoreButtons />
+      </div>
+    </div>
+  </section>
+</Base>
